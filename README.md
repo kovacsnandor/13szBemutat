@@ -17,6 +17,25 @@ Például Csontos Krisztián `git checkout -b csontos`
 Branch lekérdezése (azon állunk-e?): `git branch`
 
 ## A bemutatkozás oldal elkészítése
+- legyen a html oldal nevével egyező mappában a képpel együtt
+- legyen címe
+- legyen title
+- tartalmazzon egy rövid bemutatkozó szöveget, 
+- legyen benne egy fotó,
+- legyen rajt egy link az index.html-re.
+
+## Színpad, commit, push
+`git add .`  
+`git commit -m "bemutatkozó oldal létrehozás"`  
+`git push -u origin branchnév` (ekkor a github-on is keletkezik (-u) egy ilyen nevű branch)  
+további push esetén már nem kell -u: `git push origin branchnév`
+
+## A github-on pull request, és merge
+A github-bon annak gazdája a keletkezett branch-eken végigmegy és pull request segítségével mergeli az összeset.
+
+## Tanulók: push
+Ha kész az összes merge, akkor a tanulók átváltanak master-re: `git branch master`  
+Utána pull-al lehúzzák saját repójukba a végeredményt: `git pull`
 
 
 ## Tanulók, branch nevek, bemutatkozás oldalak
