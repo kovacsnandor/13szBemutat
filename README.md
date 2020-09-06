@@ -14,11 +14,12 @@ Email: `git config --global user.email xy@gmail.com`
 
 ## Új branch létrehozása
 Például Csontos Krisztián `git checkout -b csontos`  
-Lekérdezik a 
+Branch lekérdezése (azon állunk-e?): `git branch`
+
+## A bemutatkozás oldal elkészítése
 
 
-
-## 2. 
+## Tanulók, branch nevek, bemutatkozás oldalak
 
 - Csontos Krisztián
   - branch: csontos
