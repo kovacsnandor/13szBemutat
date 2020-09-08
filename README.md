@@ -1,75 +1,93 @@
 # 13sz osztály bemutatkozása
-Osztály projekt a git technológia bemutatása céljából.
+Osztály projekt a git technológia bemutatása céljából.  
+A gitHub repo-n van eleve egy **developer** ág
+
+# Előkészületek
 
 ## Meghívás kollaborátornak
 A projekt github oldalán meghívjuk a tanulókat a projektbe
 
-## Klónozás
-A tanulók klónozzák a projektet `git clone url`
+## Klónozás, developer repo létrehozása
+- A tanulók klónozzák a projektet `git clone url`
+- A tanulók létrehozzák a developer ágat a helyi repojukon: `git branch developer`
+- majd átkpacsolnak erre az ágra: `git checkout developer`
+- Innentől kezdve itt doloznak
 
 ## Felhasználói adatok beállítása
 Conzol ablakban beállítják a felhasználói adatokat.  
 User név: `git config --global user.name xy`  
 Email: `git config --global user.email xy@gmail.com`
 
-## Új branch létrehozása
-Például Csontos Krisztián `git checkout -b csontos`  
-Branch lekérdezése (azon állunk-e?): `git branch`
+## Branch létrehozása helyi repo-kon
+- Branch létrehozás: `git branch developer`  
+- átkapcsolás a developoer ágra: `git checkout developer`  
+- branch lekérdezése (azon állunk-e?): `git branch`
 
-## A bemutatkozás oldal elkészítése
+## Images mappa létrehozása
+A master fejlesztője létrehoz egy Images mappát.  
+Belerak valamit, hogy tudja commitolni. 
+- `git add .`
+- `git commit -m "Images folder created"`
+- `git push origin master`
+
+## Images mappa átadása a developer ágnak a gitHub-on
+- gitHub: pull request kezdeményezése
+- gitHub: pull request végrehajtása
+- midnen developoer helyi repo: pull (mindenki megkapja a mappát)
+
+# A fejlesztés folyamata
+## A bemutatkozás oldal elkészítése (developer ágon)
+### Tanulók, branch nevek, bemutatkozás oldalak
+Fejlesztő | Branch | Oldal név
+-- | :--: | --
+Kovács Nándor | **master** | index.html
+Csontos Krisztián | developer/**master** | csontos.html
+Farkas Cintia | developer | cintia.html
+Horváth Márió | developer | mario.html
+Juhász Gábor | developer | gabor.html
+Nagy János Péter | developer | janos.html
+Nagy Zoltán Albert | developer | zoltan.html
+Orsós Ákos | developer | akos.html
+Szakács Elek | developer | elek.html
+Thoma Krisztián  | developer | krisztian.html
+Tóth Lajos Szabolcs | developer | lajos.html
+Urbán Tibor | developer | tibor.html
+
+### Feladat leírása
 - legyen a html oldal nevével egyező mappában a képpel együtt
 - legyen címe
 - legyen title
 - tartalmazzon egy rövid bemutatkozó szöveget, 
 - legyen benne egy fotó,
-- legyen rajt egy link az index.html-re.
+- legyen rajt egy link az index.html-re **vissza** szöveggel.
 
-## Színpad, commit, push
+### Színpad, commit, push
 `git add .`  
-`git commit -m "bemutatkozó oldal létrehozás"`  
-`git push -u origin branchnév` (ekkor a github-on is keletkezik (-u) egy ilyen nevű branch)  
-további push esetén már nem kell -u: `git push origin branchnév`
+`git commit -m "bemutatkozó oldal create"`  
+`git push origin developer` 
 
-## A github-on pull request, és merge
+### A github-on pull request, és merge (master user csinálja)
 A github-bon annak gazdája a keletkezett branch-eken végigmegy és pull request segítségével mergeli az összeset.
 
-## Tanulók: push
+### Tanulók: pull
 Ha kész az összes merge, akkor a tanulók átváltanak master-re: `git branch master`  
 Utána pull-al lehúzzák saját repójukba a végeredményt: `git pull`
 
+## Konfliktus kezelési gyakorlat
+A **master** átváltoztatja a az index oldal címét: **Osztály névsor**-ra
+- `git add .`  
+- `git commit -m "index cím modify by master"`  
+- `git push origin master` 
+A **developer/master** tanuló ugyancsak átváltoztatja az index oldal címét: **Oszály bemutatkozás**-ra
+- `git add .`  
+- `git commit -m "index cím modify by developer"`  
+- `git push origin developer` 
+A **master** pullRequest-el át akarja vinni a **developer/master** változtatását a **master** ágra:
+- konfliktus keletkezik
+- eldönti hogy melyik jó, és javít (commit)
+- mindkét ágban ez lesz
+- minden developer: 
+  - **developoer** ágban pull
+  - **master** ágban pull
+- 
 
-## Tanulók, branch nevek, bemutatkozás oldalak
-
-- Csontos Krisztián
-  - branch: csontos
-  - csontos.html
-- Farkas Cintia
-  - branch: cintia
-  - cintia.html
-- Horváth Márió
-  - branch: mario
-  - mario.html
-- Juhász Gábor
-  - branch: gabor
-  - gabor.html
-- Nagy János Péter
-  - branch: janos
-  - janos.html
-- Nagy Zoltán Albert
-  - branch: gabor
-  - zoltan.html
-- Orsós Ákos
-  - branch: akos
-  - akos.html
-- Szakács Elek
-  - branch: elek
-  - elek.html
-- Thoma Krisztián József
-  - branch: krisztian
-  - krisztian.html
-- Tóth Lajos Szabolcs
-  - branch: lajos
-  - lajos.html
-- Urbán Tibor
-  - branch: tibor
-  - tibor.html
