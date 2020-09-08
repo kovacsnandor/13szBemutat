@@ -20,7 +20,7 @@ Email: `git config --global user.email xy@gmail.com`
 
 ## Branch létrehozása helyi repo-kon
 - Branch létrehozás: `git branch developer`  
-- átkapcsolás a developoer ágra: `git checkout developer`  
+- átkapcsolás a developer ágra: `git checkout developer`  
 - branch lekérdezése (azon állunk-e?): `git branch`
 
 ## Images mappa létrehozása
@@ -33,7 +33,7 @@ Belerak valamit, hogy tudja commitolni.
 ## Images mappa átadása a developer ágnak a gitHub-on
 - gitHub: pull request kezdeményezése
 - gitHub: pull request végrehajtása
-- midnen developoer helyi repo: pull (mindenki megkapja a mappát)
+- midnen developer helyi repo: pull (mindenki megkapja a mappát)
 
 # A fejlesztés folyamata
 ## A bemutatkozás oldal elkészítése (developer ágon)
@@ -87,7 +87,7 @@ A **master** pullRequest-el át akarja vinni a **developer/master** változtatá
 - eldönti hogy melyik jó, és javít (commit)
 - mindkét ágban ez lesz
 - minden developer: 
-  - **developoer** ágban pull
+  - **developer** ágban pull
   - **master** ágban pull
 - 
 
