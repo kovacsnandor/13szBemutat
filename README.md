@@ -23,11 +23,11 @@ Email: `git config --global user.email xy@gmail.com`
 - átkapcsolás a developer ágra: `git checkout developer`  
 - branch lekérdezése (azon állunk-e?): `git branch`
 
-## Images mappa létrehozása
-A master fejlesztője létrehoz egy Images mappát.  
+## Images és Tanulok mappa létrehozása
+A master fejlesztője létrehoz egy Images és Tanulok mappát.  
 Belerak valamit, hogy tudja commitolni. 
 - `git add .`
-- `git commit -m "Images folder created"`
+- `git commit -m "Images, Tnulok folder created"`
 - `git push origin master`
 
 ## Images mappa átadása a developer ágnak a gitHub-on
@@ -54,7 +54,8 @@ Tóth Lajos Szabolcs | developer | lajos.html
 Urbán Tibor | developer | tibor.html
 
 ### Feladat leírása
-- legyen a html oldal nevével egyező mappában a képpel együtt
+Töltsön le magáról egy képet az **Images** mappába  
+Készítse el a html oldalt a megadott néven a **Tanulok** mappába:  
 - legyen címe
 - legyen title
 - tartalmazzon egy rövid bemutatkozó szöveget, 
@@ -89,5 +90,4 @@ A **master** pullRequest-el át akarja vinni a **developer/master** változtatá
 - minden developer: 
   - **developer** ágban pull
   - **master** ágban pull
-- 
 
